@@ -25,7 +25,7 @@ st.markdown("""
 <style>
     .main-header {
         background: linear-gradient(90deg, #2563EB 0%, #1E3A8A 100%);
-        color: white;
+        color: #000000;
         padding: 2rem;
         border-radius: 10px;
         text-align: center;
@@ -33,7 +33,7 @@ st.markdown("""
     }
 
     .confidence-meter {
-        background: white;
+        background: #000000;
         border: 2px solid #2563EB;
         border-radius: 15px;
         padding: 1.5rem;
@@ -43,7 +43,7 @@ st.markdown("""
     }
 
     .feature-card {
-        background: #F8FAFC;
+        background: #000000;
         border: 1px solid #E2E8F0;
         border-radius: 8px;
         padding: 1.5rem;
@@ -51,28 +51,28 @@ st.markdown("""
     }
 
     .risk-high {
-        background: #FEE2E2;
+        background: #000000;
         border-left: 4px solid #EF4444;
         padding: 1rem;
         border-radius: 4px;
     }
 
     .risk-medium {
-        background: #FEF3C7;
+        background: #000000;
         border-left: 4px solid #F59E0B;
         padding: 1rem;
         border-radius: 4px;
     }
 
     .risk-low {
-        background: #DCFCE7;
+        background: #000000;
         border-left: 4px solid #10B981;
         padding: 1rem;
         border-radius: 4px;
     }
 
     .voice-interface {
-        background: #F0F7FF;
+        background: #000000;
         border: 2px dashed #2563EB;
         border-radius: 10px;
         padding: 2rem;
@@ -81,7 +81,7 @@ st.markdown("""
     }
 
     .trust-indicator {
-        background: #ECFDF5;
+        background: #000000;
         border: 1px solid #10B981;
         border-radius: 8px;
         padding: 1rem;
@@ -731,11 +731,11 @@ def features_demo_tab():
         # Color code by risk level
         def color_risk(val):
             if val == "High":
-                return "background-color: #FEE2E2"
+                return "background-color: #ff4000"
             elif val == "Medium":
-                return "background-color: #FEF3C7"
+                return "background-color: #ADD8E6"
             else:
-                return "background-color: #DCFCE7"
+                return "background-color: #00ff00"
 
         st.dataframe(
             df_risk.style.applymap(color_risk, subset=['Risk Level']),
@@ -788,19 +788,19 @@ def features_demo_tab():
             st.markdown("""
             <div style="border: 3px solid #2563EB; border-radius: 20px; padding: 20px; background: linear-gradient(180deg, #F8FAFC 0%, #E2E8F0 100%); text-align: center;">
                 <h4>📱 Mobile Interface Preview</h4>
-                <div style="background: white; border-radius: 10px; padding: 15px; margin: 10px 0;">
+                <div style="background: #000000; border-radius: 10px; padding: 15px; margin: 10px 0;">
                     <p><strong>📤 Document Upload</strong></p>
                     <p style="font-size: 0.9em;">Drag & drop or camera scan</p>
                 </div>
-                <div style="background: white; border-radius: 10px; padding: 15px; margin: 10px 0;">
+                <div style="background: #000000; border-radius: 10px; padding: 15px; margin: 10px 0;">
                     <p><strong>🎯 Confidence: 94%</strong></p>
                     <p style="font-size: 0.9em;">High confidence analysis</p>
                 </div>
-                <div style="background: white; border-radius: 10px; padding: 15px; margin: 10px 0;">
+                <div style="background: #000000; border-radius: 10px; padding: 15px; margin: 10px 0;">
                     <p><strong>🎙️ Voice Questions</strong></p>
                     <p style="font-size: 0.9em;">Tap to ask anything</p>
                 </div>
-                <div style="background: white; border-radius: 10px; padding: 15px; margin: 10px 0;">
+                <div style="background: #000000; border-radius: 10px; padding: 15px; margin: 10px 0;">
                     <p><strong>📋 Plain English</strong></p>
                     <p style="font-size: 0.9em;">Complex → Simple</p>
                 </div>
